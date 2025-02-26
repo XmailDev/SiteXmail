@@ -9,8 +9,8 @@
 </head>
 <body>
     <!-- Header Barra de navegação-->
-    <div class="header-container col-6 mx-auto p-4 mt-5">        
-        <header class="header col-xl-6 col-sm-3">
+    <div class="header-container col-6 mx-auto p-4 mt-5">
+        <header class="header col-12">
             <div class="logo">
                 <svg width="138" height="35" viewBox="0 0 138 35" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M47.5592 6.39798C47.5592 4.09645 46.0967 2.1297 43.8115 1.25093C41.4807 0.372166 38.967 0.832471 37.1846 2.46446L23.9308 13.3863L10.6312 2.42262C8.84879 0.790626 6.33513 0.372166 4.00428 1.20908C1.67343 2.08785 0.210938 4.09645 0.210938 6.39798V28.1579C0.210938 29.6643 0.805076 31.0452 1.94765 32.0914C3.09022 33.1375 4.64412 33.7234 6.24372 33.7234H41.4807C43.126 33.7234 44.6342 33.1375 45.7768 32.0914C46.9193 31.0452 47.5592 29.6225 47.5592 28.1579V6.39798ZM41.5264 29.3296H6.28943C5.96951 29.3296 5.64959 29.204 5.37537 28.9948C5.14685 28.7856 5.00975 28.4926 5.00975 28.1579V6.39798C5.00975 5.6866 5.60388 5.43553 5.8324 5.30999C5.9238 5.30999 6.10662 5.2263 6.33513 5.2263C6.56365 5.2263 6.92927 5.30999 7.20349 5.56106L20.2288 16.3155L10.7683 24.1825H17.9437L23.9308 19.3284L29.7807 24.1825H37.0932L27.5413 16.3155L40.6123 5.60291C40.8866 5.35183 41.1608 5.2263 41.4807 5.2263C41.8006 5.2263 41.9377 5.30999 41.9834 5.30999C42.2119 5.39368 42.7604 5.6866 42.7604 6.39798V28.1579C42.7604 28.7856 42.2119 29.3296 41.5264 29.3296Z" fill="#0055D8"/>
@@ -33,13 +33,19 @@
                 <a href="#">Crescimento</a>
                 <a href="#">Público Alvo</a>
             </nav>
+            <div class="hamburger-menu" id="hamburgerMenu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
             <a href="#" class="btn primary">Criar Conta Nova 
                 <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <circle cx="7" cy="6.78906" r="6.78906" fill="#E3F0FF"/>
                 <path d="M6.83367 2.99776C6.74226 3.08917 6.69091 3.21315 6.69091 3.34243C6.69091 3.4717 6.74226 3.59568 6.83367 3.68709L9.44967 6.30309L3.7317 6.29964C3.6019 6.29964 3.47741 6.3512 3.38562 6.44299C3.29384 6.53477 3.24228 6.65926 3.24228 6.78906C3.24228 6.91887 3.29384 7.04335 3.38562 7.13514C3.47741 7.22692 3.6019 7.27849 3.7317 7.27849L9.44967 7.27504L6.83367 9.89104C6.74226 9.98245 6.69091 10.1064 6.69091 10.2357C6.69091 10.365 6.74226 10.489 6.83367 10.5804C6.92508 10.6718 7.04906 10.7231 7.17834 10.7231C7.30761 10.7231 7.43159 10.6718 7.523 10.5804L10.9696 7.13373C11.0141 7.08814 11.0493 7.03428 11.073 6.97518C11.1223 6.85599 11.1223 6.72214 11.073 6.60294C11.0493 6.54385 11.0141 6.48998 10.9696 6.4444L7.523 2.99776C7.43159 2.90635 7.30761 2.855 7.17834 2.855C7.04906 2.855 6.92508 2.90635 6.83367 2.99776Z" fill="#FFDBBD"/>
                 <path d="M6.83367 2.99776C6.74226 3.08917 6.69091 3.21315 6.69091 3.34243C6.69091 3.4717 6.74226 3.59568 6.83367 3.68709L9.44967 6.30309L3.7317 6.29964C3.6019 6.29964 3.47741 6.3512 3.38562 6.44299C3.29384 6.53477 3.24228 6.65926 3.24228 6.78906C3.24228 6.91887 3.29384 7.04335 3.38562 7.13514C3.47741 7.22692 3.6019 7.27849 3.7317 7.27849L9.44967 7.27504L6.83367 9.89104C6.74226 9.98245 6.69091 10.1064 6.69091 10.2357C6.69091 10.365 6.74226 10.489 6.83367 10.5804C6.92508 10.6718 7.04906 10.7231 7.17834 10.7231C7.30761 10.7231 7.43159 10.6718 7.523 10.5804L10.9696 7.13373C11.0141 7.08814 11.0493 7.03428 11.073 6.97518C11.1223 6.85599 11.1223 6.72214 11.073 6.60294C11.0493 6.54385 11.0141 6.48998 10.9696 6.4444L7.523 2.99776C7.43159 2.90635 7.30761 2.855 7.17834 2.855C7.04906 2.855 6.92508 2.90635 6.83367 2.99776Z" fill="#0055D8"/>
                 </svg>
-                </a>
+            </a>
+            
         </header>
     </div>
 
@@ -109,32 +115,31 @@
         </div>
     </section>
 
-
     <section class="testimonials">
         <h2>Quem utiliza e <span class="highlight">confia</span> na Xmail</h2>
         <div class="testimonial-list">
             <div class="testimonial">
-                <img src="imagens/4b8cd6bad4ac4922a7a3922d76a9754a.png" alt="Wendell Carvalho">
+                <img src="4b8cd6bad4ac4922a7a3922d76a9754a.png" alt="Wendell Carvalho">
                 <p>Carol Rache</p>
             </div>
             <div class="testimonial">
-                <img src="imagens/88b35268b2f2831c2f5ef94c710ef870.png" alt="Wendell Carvalho">
+                <img src="88b35268b2f2831c2f5ef94c710ef870.png" alt="Wendell Carvalho">
                 <p>Gabriel Rucci</p>
             </div>
             <div class="testimonial">
-                <img src="imagens/d232ea6f8b4b1149c1a41b7a8d8456dc.png" alt="Wendell Carvalho">
+                <img src="d232ea6f8b4b1149c1a41b7a8d8456dc.png" alt="Wendell Carvalho">
                 <p>Rodrigo Vinhas</p>
             </div>
             <div class="testimonial">
-                <img src="imagens/dc7408334653e0c713e2b4d096f83e8e.png" alt="Wendell Carvalho">
+                <img src="dc7408334653e0c713e2b4d096f83e8e.png" alt="Wendell Carvalho">
                 <p>Rodrigo Goes</p>
             </div>
             <div class="testimonial">
-                <img src="imagens/e0cfb5ff51d6401425db94f75e83b44d.png" alt="Wendell Carvalho">
+                <img src="e0cfb5ff51d6401425db94f75e83b44d.png" alt="Wendell Carvalho">
                 <p>Karina Peloi</p>
             </div>
             <div class="testimonial">
-                <img src="imagens/f3df5791cb2804d60fef32e7dcefe171.png" alt="Wendell Carvalho">
+                <img src="f3df5791cb2804d60fef32e7dcefe171.png" alt="Wendell Carvalho">
                 <p>Valeska Bruzzi</p>
             </div>
         </div>
@@ -561,3 +566,12 @@
 
 </html>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<script>
+    const hamburgerMenu = document.getElementById("hamburgerMenu");
+    const menu = document.querySelector(".menu");
+
+    hamburgerMenu.addEventListener("click", () => {
+        menu.classList.toggle("active");
+    });
+
+</script>

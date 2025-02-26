@@ -21,13 +21,12 @@ body {
     max-width: none;
     backdrop-filter: blur(1.5px);
     position: fixed;
-    left: 49%;
-    transform: translateX(-50%); /* Centraliza horizontalmente */
+    left: 50%;
+    transform: translateX(-50%);
     display: flex;
     justify-content: center;
     z-index: 2;
 }
-
 
 .header {
     display: flex;
@@ -37,15 +36,6 @@ body {
     max-width: 1200px;
 }
 
-.container {
-    width: 90%;
-    max-width: 1100px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-}
-
 .logo img {
     height: 40px;
 }
@@ -53,6 +43,8 @@ body {
 .menu {
     display: flex;
     gap: 25px;
+    justify-content: center; /* Centraliza as opções do menu */
+    flex: 2; /* Para centralizar os itens */
 }
 
 .menu a {
@@ -93,37 +85,100 @@ body {
     background-color: #357ABD;
 }
 
+/* Mobile responsive styles */
+@media (max-width: 768px) {
+    .menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 10px;
+        background-color: #D5E6FFCC;
+        border-radius: 20px;
+        width: 200px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .menu.active {
+        display: flex;
+    }
+
+    .hamburger-menu {
+        display: block;
+        cursor: pointer;
+    }
+
+    .hamburger-menu span {
+        display: block;
+        width: 25px;
+        height: 4px;
+        margin: 5px 0;
+        background-color: #0A1F44;
+    }
+}
+
+/* Show the hamburger menu only on mobile screens */
+@media (max-width: 700px) {
+    
+    .hamburger-menu {
+        display: block;
+    }
+
+    .menu {
+        flex-direction: column; /* Empilha o menu na versão mobile */
+        width: 100%;
+        justify-content: center;
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 10px;
+        background-color: #D5E6FFCC;
+        border-radius: 20px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .menu.active {
+        display: flex;
+        align-items: center;
+    }
+}
+
 /* HERO SECTION */
 .hero {
     display: flex;
     justify-content: center;
     padding: 60px 20px;
     background-color: #EDF5FF;
-    border-radius: 20px;    
+    border-radius: 20px;
     border: 2px solid #D2E6FF;
-    margin: 40px 40px; /* Afasta a borda das laterais */
+    margin: 40px 40px;
+    flex-direction: column; /* Alterado para coluna em telas menores */
 }
-
 
 .hero .container {
     display: flex;
+    flex-direction: column; /* Empilha os itens em telas pequenas */
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     z-index: 1;
-    margin-top: 80px;
+    margin-top: 40px; /* Ajuste para centralizar melhor em telas pequenas */
 }
 
 .text-content {
+    text-align: center; /* Garante que o texto fique centralizado */
     max-width: 900px;
 }
 
 h1 {
     font-size: 50px;
-
+    line-height: 1.2; /* Ajuste para melhor espaçamento */
 }
 
 p {
     font-size: 20px;
+    line-height: 1.5;
+    margin-top: 15px; /* Ajuste o espaçamento entre o parágrafo e o título */
 }
 
 .highlight {
@@ -136,18 +191,22 @@ p {
 }
 
 .buttons {
-    margin-top: 20px;
+    margin-top: 30px; /* Aumentando o espaço entre o texto e os botões */
+    display: flex;
+    justify-content: center; /* Centraliza os botões */
+    gap: 10px; /* Ajuste no espaçamento entre os botões */
 }
 
 .buttons .btn {
-    margin-right: 10px;
+    padding: 12px 30px; /* Ajuste do tamanho do botão */
+    font-size: 16px; /* Tamanho do texto no botão */
 }
 
 /* IMAGE CONTENT */
 .image-content {
     display: block;
-    text-align: center; /* Centraliza a imagem */
-    margin-top: 20px; /* Adiciona um espaço entre o texto e a imagem */
+    text-align: center;
+    margin-top: 20px;
     width: 100%;
 }
 
@@ -155,12 +214,62 @@ p {
     max-width: 100%;
     height: auto;
     display: block;
-    margin: 0 auto; /* Garante centralização */
+    margin: 0 auto;
 }
 
-header, .hero {
-    position: relative; /* Garante que o z-index funcione corretamente */
+/* Responsividade */
+@media (max-width: 768px) {
+    .hero {
+        padding: 40px 20px; /* Reduzindo o padding em telas menores */
+        margin: 20px 20px; /* Ajuste nas margens para telas pequenas */
+    }
+
+    .hero .container {
+        flex-direction: column; /* Empilha os itens em telas pequenas */
+        margin-top: 20px; /* Reduzindo o espaçamento */
+    }
+
+    h1 {
+        font-size: 35px; /* Ajuste do tamanho da fonte em telas pequenas */
+    }
+
+    p {
+        font-size: 18px; /* Ajuste do tamanho do texto em telas pequenas */
+    }
+
+    .buttons {
+        flex-direction: column; /* Empilha os botões em telas pequenas */
+        align-items: center;
+    }
+
+    .buttons .btn {
+        width: 100%; /* Faz os botões ocuparem a largura disponível */
+        margin-bottom: 10px; /* Espaço entre os botões */
+    }
+
+    .image-content {
+        margin-top: 30px; /* Ajuste no espaço entre o texto e a imagem */
+    }
 }
+
+@media (max-width: 480px) {
+    .hero {
+        padding: 30px 20px; /* Mais ajustes no padding para telas muito pequenas */
+    }
+
+    h1 {
+        font-size: 30px; /* Menor tamanho de fonte para telas menores */
+    }
+
+    p {
+        font-size: 16px; /* Ajuste ainda maior do texto */
+    }
+
+    .buttons .btn {
+        padding: 10px 25px; /* Ajuste do tamanho do botão para telas pequenas */
+    }
+}
+
 
 /*QUEM USA E CONFIA NA XMAIL*/
 
