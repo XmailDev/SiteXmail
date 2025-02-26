@@ -1,0 +1,487 @@
+/* Importa a fonte Kanit do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Kanit', sans-serif;
+}
+
+body {
+    background-color: #ffffff;
+    color: #0A1F44;
+}
+
+/* HEADER */
+.header-container {
+    background-color: #D5E6FFCC;
+    border-radius: 50px;
+    width: 90%;
+    max-width: none;
+    backdrop-filter: blur(1.5px);
+    position: fixed;
+    left: 49%;
+    transform: translateX(-50%); /* Centraliza horizontalmente */
+    display: flex;
+    justify-content: center;
+    z-index: 2;
+}
+
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.logo img {
+    height: 40px;
+}
+
+.menu {
+    display: flex;
+    gap: 25px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #0A1F44;
+    margin: 0 10px;
+    font-weight: 500;
+    transition: 0.3s;
+    font-size: 16px;
+}
+
+.menu a:hover {
+    color: #1A73E8;
+}
+
+.btn {
+    padding: 10px 20px;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.primary {
+    background: #0055D8;
+    color: white;
+}
+
+.primary:hover {
+    background-color: #135AB5;
+}
+
+.secondary {
+    background-color:  #10ADF6;
+    color: white;
+}
+
+.secondary:hover {
+    background-color: #357ABD;
+}
+
+/* HERO SECTION */
+.hero {
+    display: flex;
+    justify-content: center;
+    padding: 60px 20px;
+    background-color: #EDF5FF;
+    border-radius: 20px;    
+    border: 2px solid #D2E6FF;
+    margin: 40px 40px; /* Afasta a borda das laterais */
+}
+
+
+.hero .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1;
+    margin-top: 80px;
+}
+
+.text-content {
+    max-width: 900px;
+}
+
+h1 {
+    font-size: 50px;
+
+}
+
+p {
+    font-size: 20px;
+}
+
+.highlight {
+    color: #1A73E8;
+}
+
+.subtext {
+    color: #5A5A5A;
+    margin-top: 10px;
+}
+
+.buttons {
+    margin-top: 20px;
+}
+
+.buttons .btn {
+    margin-right: 10px;
+}
+
+/* IMAGE CONTENT */
+.image-content {
+    display: block;
+    text-align: center; /* Centraliza a imagem */
+    margin-top: 20px; /* Adiciona um espaço entre o texto e a imagem */
+    width: 100%;
+}
+
+.image-content img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto; /* Garante centralização */
+}
+
+header, .hero {
+    position: relative; /* Garante que o z-index funcione corretamente */
+}
+
+/*QUEM USA E CONFIA NA XMAIL*/
+
+
+/* Estiliza a seção principal */
+.testimonials {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+/* Título */
+.testimonials h2 {
+    font-size: 56px;
+    color: #012970;
+}
+
+/* Destacar palavra "confia" */
+.highlight {
+    color: #007BFF;
+}
+
+/* Contêiner dos depoimentos */
+.testimonial-list {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+/* Cartão de cada usuário */
+.testimonial {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    border-radius: 50px;
+    border: 1px solid #007BFF20;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease-in-out;
+    background: #EDF5FF;
+
+}
+
+/* Efeito hover */
+.testimonial:hover {
+    transform: translateY(-5px);
+}
+
+/* Imagem do usuário */
+.testimonial img {
+    width: 51px;
+    height: 51px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+/* Nome do usuário */
+.testimonial p {
+    font-size: 24px;
+    color: #012970;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .testimonial-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .testimonial {
+        width: 80%;
+        justify-content: center;
+        background: #EDF5FF;
+    }
+}
+
+
+
+/*SUPORTE E ANÁLISE*/
+
+
+
+/* Estilos da seção de serviços */
+.services {
+    margin: 0 auto;
+    padding: 50px 20px;
+    background-color: #EDF5FF;
+    border-radius: 20px;    
+    border: 2px solid #D2E6FF;
+    margin: 0 40px; /* Afasta a borda das laterais */
+   
+}
+
+/* Cada serviço */
+.service {
+    display: flex;
+    align-items: center;
+    border-radius: 15px;
+    padding: 30px;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+/* Texto */
+.service-text {
+    width: 50%;
+}
+
+.service-text h2 {
+    color: #004AAD;
+    font-size: 24px;
+}
+
+.service-text p {
+    font-size: 16px;
+    color: #333;
+}
+
+/* Imagens */
+.service-image {
+    width: 40%;
+    text-align: center;
+}
+
+.service-image img {
+    width: 100%;
+    max-width: 300px;
+}
+
+/* Inverter ordem da segunda seção */
+.reverse {
+    flex-direction: row-reverse;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .service {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .service-text, .service-image {
+        width: 100%;
+    }
+
+    .reverse {
+        flex-direction: column;
+    }
+}
+
+
+
+/*888888888888888888888888888888888*/
+
+
+
+/* Seção principal */
+.xmail-benefits {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+/* Título */
+.xmail-benefits h2 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+/* Destacar 'by ActiveCampaign' */
+.highlight {
+    color: #007BFF;
+}
+
+/* Grid dos cartões */
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Estilização dos cartões */
+.benefit-card {
+    background-color: #E6F0FF;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: left;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Efeito hover */
+.benefit-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Primeiro cartão destacado */
+.highlight-card {
+    background-color: #0052CC;
+    color: white;
+}
+
+/* Textos dentro dos cartões */
+.benefit-card h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.benefit-card p {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .benefits-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+
+
+
+
+
+.workflow {
+    background-color: #d5e6ff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.workflow h2 {
+    color: #333;
+}
+
+.workflow ol {
+    padding-left: 20px;
+}
+
+.workflow li {
+    margin-bottom: 10px;
+}
+
+
+
+
+
+
+/*Parte chata*/
+
+
+/*footer*/
+.footer {
+    background: #F2F6FC;
+    padding: 20px;
+    border-radius: 15px;
+    border: 1px solid #C9D5E5;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    color: #1D3557;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 15px;
+}
+
+.footer-logo img {
+    height: 40px;
+}
+
+.footer-social a {
+    margin: 0 10px;
+    font-size: 24px;
+    color: #1D3557;
+    text-decoration: none;
+}
+
+.footer-social a:hover {
+    color: #457B9D;
+}
+
+.footer-top a {
+    text-decoration: none;
+    color: #1D3557;
+    font-weight: bold;
+}
+
+.footer-top i {
+    margin-left: 5px;
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid #C9D5E5;
+    margin: 10px 0;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    font-size: 14px;
+    color: #1D3557;
+}
+
+.footer-bottom a {
+    text-decoration: none;
+    color: #1D3557;
+    font-weight: bold;
+}
+
+.footer-bottom img {
+    height: 20px;
+    vertical-align: middle;
+    margin-left: 5px;
+}
